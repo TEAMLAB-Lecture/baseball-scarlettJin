@@ -269,16 +269,14 @@ def main():
             break
         valid = is_validated_number(user_input)
         if not valid:
-            print("Wrong Input, Input again")
-            user_input = input("Input guess number is :")
+            user_input = input("Wrong Input, Input again\nInput guess number is :")
             continue
 
         s,b = get_strikes_or_ball(user_input, random_number)
         if s==3:
             user_input= input("You win, one more(Y/N)?")
             while not is_yes(user_input) and not is_no(user_input):
-               print("Wrong Input, Input again") 
-               user_input= input("You win, one more(Y/N)?")
+               user_input= input("Wrong Input, Input again\nYou win, one more(Y/N)?")
           
             if is_yes(user_input):
                 random_number = str(get_not_duplicated_three_digit_number())
