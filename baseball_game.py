@@ -269,7 +269,8 @@ def main():
             break
         valid = is_validated_number(user_input)
         if not valid:
-            user_input = input("Wrong Input, Input again\nInput guess number is :")
+            print("Wrong Input.Input again")
+            user_input = input("Input guess number is :")
             continue
 
         s,b = get_strikes_or_ball(user_input, random_number)
