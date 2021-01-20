@@ -263,7 +263,7 @@ def main():
     random_number = str(get_not_duplicated_three_digit_number())
     print("Random Number is : ", random_number)
     user_input = input("Input guess number is :")
-    while(user_input !=0):
+    while True:
         #validation
         if user_input == '0':
             break
